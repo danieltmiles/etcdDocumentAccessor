@@ -1,0 +1,5 @@
+main
+minaproxy
+.*.swp
+.idea
+set_env.sh

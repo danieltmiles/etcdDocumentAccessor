@@ -1,0 +1,115 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "7UA5xypGCK2rsrcAf3udKkwOkJM=",
+			"path": "github.com/coreos/etcd/client",
+			"revision": "ab532524b05ef61f17ad0d4464a3507629b49fc0",
+			"revisionTime": "2017-01-23T21:08:04Z"
+		},
+		{
+			"checksumSHA1": "mKIXx1kDwmVmdIpZ3pJtRBuUKso=",
+			"path": "github.com/coreos/etcd/pkg/pathutil",
+			"revision": "ab532524b05ef61f17ad0d4464a3507629b49fc0",
+			"revisionTime": "2017-01-23T21:08:04Z"
+		},
+		{
+			"checksumSHA1": "gx1gJIMU6T0UNQ0bPZ/drQ8cpCI=",
+			"path": "github.com/coreos/etcd/pkg/types",
+			"revision": "ab532524b05ef61f17ad0d4464a3507629b49fc0",
+			"revisionTime": "2017-01-23T21:08:04Z"
+		},
+		{
+			"checksumSHA1": "3g6SrQ0YmvEvx1MTqwKPqZd7B38=",
+			"path": "github.com/onsi/gomega",
+			"revision": "d59fa0ac68bb5dd932ee8d24eed631cdd519efc3",
+			"revisionTime": "2016-09-11T05:10:23Z"
+		},
+		{
+			"checksumSHA1": "iKciSU4Btf8T1Fdux1CXEiGysOc=",
+			"path": "github.com/onsi/gomega/format",
+			"revision": "d59fa0ac68bb5dd932ee8d24eed631cdd519efc3",
+			"revisionTime": "2016-09-11T05:10:23Z"
+		},
+		{
+			"checksumSHA1": "H4RBR9kcEWh2lECAzBaOTSvgUuA=",
+			"path": "github.com/onsi/gomega/internal/assertion",
+			"revision": "d59fa0ac68bb5dd932ee8d24eed631cdd519efc3",
+			"revisionTime": "2016-09-11T05:10:23Z"
+		},
+		{
+			"checksumSHA1": "N7HhJzMN+STfzI315keM9SxFQAE=",
+			"path": "github.com/onsi/gomega/internal/asyncassertion",
+			"revision": "d59fa0ac68bb5dd932ee8d24eed631cdd519efc3",
+			"revisionTime": "2016-09-11T05:10:23Z"
+		},
+		{
+			"checksumSHA1": "EsgeBqN2S5wj8aWvGsS162ZK7xI=",
+			"path": "github.com/onsi/gomega/internal/oraclematcher",
+			"revision": "d59fa0ac68bb5dd932ee8d24eed631cdd519efc3",
+			"revisionTime": "2016-09-11T05:10:23Z"
+		},
+		{
+			"checksumSHA1": "G+KJsEQohAtPAHEbhHxRN0pffcA=",
+			"path": "github.com/onsi/gomega/internal/testingtsupport",
+			"revision": "d59fa0ac68bb5dd932ee8d24eed631cdd519efc3",
+			"revisionTime": "2016-09-11T05:10:23Z"
+		},
+		{
+			"checksumSHA1": "cfZX1yRbg/mTs6Eu5Iu0WKykWpQ=",
+			"path": "github.com/onsi/gomega/matchers",
+			"revision": "d59fa0ac68bb5dd932ee8d24eed631cdd519efc3",
+			"revisionTime": "2016-09-11T05:10:23Z"
+		},
+		{
+			"checksumSHA1": "gWJfsDHiZTga1esEChd+MfpftN0=",
+			"path": "github.com/onsi/gomega/matchers/support/goraph/bipartitegraph",
+			"revision": "d59fa0ac68bb5dd932ee8d24eed631cdd519efc3",
+			"revisionTime": "2016-09-11T05:10:23Z"
+		},
+		{
+			"checksumSHA1": "zjTC6ady0bJUwzTFAKtv63T7Fmg=",
+			"path": "github.com/onsi/gomega/matchers/support/goraph/edge",
+			"revision": "d59fa0ac68bb5dd932ee8d24eed631cdd519efc3",
+			"revisionTime": "2016-09-11T05:10:23Z"
+		},
+		{
+			"checksumSHA1": "o2+IscLOPKOiovl2g0/igkD1R4Q=",
+			"path": "github.com/onsi/gomega/matchers/support/goraph/node",
+			"revision": "d59fa0ac68bb5dd932ee8d24eed631cdd519efc3",
+			"revisionTime": "2016-09-11T05:10:23Z"
+		},
+		{
+			"checksumSHA1": "yEF1BYQPwS3neYFKiqNQReqnadY=",
+			"path": "github.com/onsi/gomega/matchers/support/goraph/util",
+			"revision": "d59fa0ac68bb5dd932ee8d24eed631cdd519efc3",
+			"revisionTime": "2016-09-11T05:10:23Z"
+		},
+		{
+			"checksumSHA1": "zEuQ0PUlbqojtNwvu01Mn3DQCJM=",
+			"path": "github.com/onsi/gomega/types",
+			"revision": "d59fa0ac68bb5dd932ee8d24eed631cdd519efc3",
+			"revisionTime": "2016-09-11T05:10:23Z"
+		},
+		{
+			"checksumSHA1": "jfIUoeCY4uLz1zCgnCxndi5/UNE=",
+			"path": "github.com/ugorji/go/codec",
+			"revision": "faddd6128c66c4708f45fdc007f575f75e592a3c",
+			"revisionTime": "2016-09-28T01:52:44Z"
+		},
+		{
+			"checksumSHA1": "hKZGpbFuCrkE4s1vxubKK1aFlfI=",
+			"path": "golang.org/x/net/context",
+			"revision": "db8e4de5b2d6653f66aea53094624468caad15d2",
+			"revisionTime": "2015-08-24T16:07:02Z"
+		},
+		{
+			"checksumSHA1": "SPMXWeoFQa5z0pLPmqpcFzyHqQQ=",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "31c299268d302dd0aa9a0dcf765a3d58971ac83f",
+			"revisionTime": "2016-09-12T16:56:03Z"
+		}
+	],
+	"rootPath": "github.com/monsooncommerce/etcdDocumentAccessor"
+}
