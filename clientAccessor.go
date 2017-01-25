@@ -40,14 +40,16 @@ func (e *EtcdDocumentAccessor) Watch() <-chan string {
 	responseChan := make(chan string, 1)
 	go func(responseChan chan string) {
 		watcher := e.KeysAPI.Watcher(e.DocumentKey, nil)
-		resp, err := watcher.Next(context.Background())
-		if err != nil {
-			responseChan <- ""
+		for {
+			resp, err := watcher.Next(context.Background())
+			if err != nil {
+				responseChan <- ""
+			} else if resp == nil || resp.Node == nil {
+				responseChan <- ""
+			} else {
+				responseChan <- resp.Node.Value
+			}
 		}
-		if resp == nil || resp.Node == nil {
-			responseChan <- ""
-		}
-		responseChan <- resp.Node.Value
 	}(responseChan)
 	return responseChan
 }
