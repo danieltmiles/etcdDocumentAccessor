@@ -1,6 +1,7 @@
 package etcdDocumentAccessor
 
 import (
+	"context"
 	"testing"
 	"time"
 
@@ -51,4 +52,21 @@ func TestWatch(t *testing.T) {
 	case <-time.After(time.Second):
 		Expect(1).To(Equal(2), "watcher failed to put anything on its channel")
 	}
+}
+
+func TestAllFulfilled(t *testing.T) {
+	RegisterTestingT(t)
+	fakeKeysApi := etcdClientWrapper.FakeKeysAPI{}
+	fakeKeysApi.ExpectGet("/testkey", "expected result")
+	fakeKeysApi.Get(context.Background(), "/testkey", nil)
+	err := fakeKeysApi.ExpectationsFulfilled()
+	Expect(err).NotTo(HaveOccurred())
+}
+
+func TestAllNotFulfilled(t *testing.T) {
+	RegisterTestingT(t)
+	fakeKeysApi := etcdClientWrapper.FakeKeysAPI{}
+	fakeKeysApi.ExpectGet("/testkey", "expected result")
+	err := fakeKeysApi.ExpectationsFulfilled()
+	Expect(err).To(HaveOccurred())
 }
