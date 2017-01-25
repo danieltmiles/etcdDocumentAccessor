@@ -1,5 +1,5 @@
 main
-minaproxy
+etcdDocumentAccessor
 .*.swp
 .idea
 set_env.sh
