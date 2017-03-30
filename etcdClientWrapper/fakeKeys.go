@@ -19,17 +19,6 @@ type FakeKeysAPI struct {
 	Nodes []*client.Node
 }
 
-func (f *FakeKeysAPI) Watcher(key string, opts *client.WatcherOptions) client.Watcher {
-	watcher := &FakeWatcher{}
-	go func(watcher *FakeWatcher) {
-		for {
-			<-time.After(500 * time.Microsecond)
-			watcher.Nodes = append(watcher.Nodes, f.Nodes...)
-		}
-	}(watcher)
-	return watcher
-}
-
 func (f *FakeKeysAPI) Get(ctx context.Context, key string, opts *client.GetOptions) (resp *client.Response, err error) {
 	resp = &client.Response{}
 	if len(f.Nodes) == 0 {
@@ -55,8 +44,31 @@ func (f *FakeKeysAPI) Set(ctx context.Context, key, val string, opts *client.Set
 	return &resp, nil
 }
 
-func (f *FakeKeysAPI) ExpectGet(key, value string) {
-	f.Nodes = append(f.Nodes, &client.Node{Key: key, Value: value})
+func (f *FakeKeysAPI) Delete(ctx context.Context, key string, opts *client.DeleteOptions) (*client.Response, error) {
+	return nil, nil
+}
+
+func (f *FakeKeysAPI) Create(ctx context.Context, key, value string) (*client.Response, error) {
+	return nil, nil
+}
+
+func (f *FakeKeysAPI) CreateInOrder(ctx context.Context, dir, value string, opts *client.CreateInOrderOptions) (*client.Response, error) {
+	return nil, nil
+}
+
+func (f *FakeKeysAPI) Update(ctx context.Context, key, value string) (*client.Response, error) {
+	return nil, nil
+}
+
+func (f *FakeKeysAPI) Watcher(key string, opts *client.WatcherOptions) client.Watcher {
+	watcher := &FakeWatcher{}
+	go func(watcher *FakeWatcher) {
+		for {
+			<-time.After(500 * time.Microsecond)
+			watcher.Nodes = append(watcher.Nodes, f.Nodes...)
+		}
+	}(watcher)
+	return watcher
 }
 
 func (f *FakeKeysAPI) ExpectationsFulfilled() error {
@@ -64,4 +76,8 @@ func (f *FakeKeysAPI) ExpectationsFulfilled() error {
 		return errors.New("unmet expectations in FakeKeysAPI")
 	}
 	return nil
+}
+
+func (f *FakeKeysAPI) ExpectGet(key, value string) {
+	f.Nodes = append(f.Nodes, &client.Node{Key: key, Value: value})
 }
