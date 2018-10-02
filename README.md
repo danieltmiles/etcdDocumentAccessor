@@ -1,5 +1,6 @@
 # Simple wrapper for common etcd operations
 
+
 ## Constructing your accessor:
 An accessor interacts with exactly one key in etcd and must be supplied with a github.com/coreos/etcd/client.KeysAPI
 instance when you construct it.
